@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cccfccf025d424f1147047eda5bcf0f",
+    "content-hash": "9f9dd16e74375da4a1864d15db42de43",
     "packages": [
         {
             "name": "bshaffer/oauth2-server-php",
-            "version": "v1.14.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bshaffer/oauth2-server-php.git",
-                "reference": "096db2c86a7d67a2ba45e72be7d208c342694542"
+                "url": "https://github.com/pagbada/oauth2-server-php.git",
+                "reference": "8f5599572845c2b96aada504318d8b9c8ac55d32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bshaffer/oauth2-server-php/zipball/096db2c86a7d67a2ba45e72be7d208c342694542",
-                "reference": "096db2c86a7d67a2ba45e72be7d208c342694542",
+                "url": "https://api.github.com/repos/pagbada/oauth2-server-php/zipball/8f5599572845c2b96aada504318d8b9c8ac55d32",
+                "reference": "8f5599572845c2b96aada504318d8b9c8ac55d32",
                 "shasum": ""
             },
             "require": {
@@ -44,7 +44,6 @@
                     "OAuth2": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -60,13 +59,13 @@
             "keywords": [
                 "auth",
                 "oauth",
-                "oauth2"
+                "oauth2",
+                "server"
             ],
             "support": {
-                "issues": "https://github.com/bshaffer/oauth2-server-php/issues",
-                "source": "https://github.com/bshaffer/oauth2-server-php/tree/v1.14.1"
+                "source": "https://github.com/pagbada/oauth2-server-php/tree/1.0.2"
             },
-            "time": "2023-07-07T17:53:54+00:00"
+            "time": "2024-06-18T05:06:13+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -1937,12 +1936,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pagbada/zf-mvc-auth.git",
-                "reference": "09be621e340a09640b231c2be72bc59fb33fd5c1"
+                "reference": "62ee7f26f6c958d3b9e9c3158c2e08bf723d4dce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pagbada/zf-mvc-auth/zipball/09be621e340a09640b231c2be72bc59fb33fd5c1",
-                "reference": "09be621e340a09640b231c2be72bc59fb33fd5c1",
+                "url": "https://api.github.com/repos/pagbada/zf-mvc-auth/zipball/62ee7f26f6c958d3b9e9c3158c2e08bf723d4dce",
+                "reference": "62ee7f26f6c958d3b9e9c3158c2e08bf723d4dce",
                 "shasum": ""
             },
             "require": {
@@ -2020,24 +2019,24 @@
                 "chat": "https://zendframework-slack.herokuapp.com",
                 "forum": "https://discourse.zendframework.com/c/questions/apigility"
             },
-            "time": "2024-06-17T13:39:56+00:00"
+            "time": "2024-06-18T06:08:27+00:00"
         },
         {
             "name": "zfcampus/zf-oauth2",
-            "version": "1.5.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zfcampus/zf-oauth2.git",
-                "reference": "8fbdb60620e5004ca6a3be580a621ea337dc8e91"
+                "url": "https://github.com/pagbada/zf-oauth2.git",
+                "reference": "6588cdf4d44094038b7f1d2af103bed0b2af612b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zfcampus/zf-oauth2/zipball/8fbdb60620e5004ca6a3be580a621ea337dc8e91",
-                "reference": "8fbdb60620e5004ca6a3be580a621ea337dc8e91",
+                "url": "https://api.github.com/repos/pagbada/zf-oauth2/zipball/6588cdf4d44094038b7f1d2af103bed0b2af612b",
+                "reference": "6588cdf4d44094038b7f1d2af103bed0b2af612b",
                 "shasum": ""
             },
             "require": {
-                "bshaffer/oauth2-server-php": "^1.10",
+                "bshaffer/oauth2-server-php": "@dev",
                 "php": "^5.6 || ^7.0",
                 "zendframework/zend-crypt": "^3.3",
                 "zendframework/zend-http": "^2.5.4",
@@ -2076,27 +2075,48 @@
                     "ZF\\OAuth2\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "ZFTest\\OAuth2\\": "test/"
+                }
+            },
+            "scripts": {
+                "check": [
+                    "@cs-check",
+                    "@test"
+                ],
+                "cs-check": [
+                    "phpcs"
+                ],
+                "cs-fix": [
+                    "phpcbf"
+                ],
+                "test": [
+                    "phpunit --colors=always"
+                ],
+                "test-coverage": [
+                    "phpunit --colors=always --coverage-clover clover.xml"
+                ]
+            },
             "license": [
                 "BSD-3-Clause"
             ],
             "description": "ZF module for implementing an OAuth2 server",
             "keywords": [
-                "ZendFramework",
                 "api",
                 "framework",
                 "oauth2",
+                "zendframework",
                 "zf"
             ],
             "support": {
-                "chat": "https://zendframework-slack.herokuapp.com",
-                "forum": "https://discourse.zendframework.com/c/questions/apigility",
                 "issues": "https://github.com/zfcampus/zf-oauth2/issues",
+                "source": "https://github.com/zfcampus/zf-oauth2",
                 "rss": "https://github.com/zfcampus/zf-oauth2/releases.atom",
-                "source": "https://github.com/zfcampus/zf-oauth2"
+                "chat": "https://zendframework-slack.herokuapp.com",
+                "forum": "https://discourse.zendframework.com/c/questions/apigility"
             },
-            "abandoned": "laminas-api-tools/api-tools-oauth2",
-            "time": "2018-05-07T21:55:10+00:00"
+            "time": "2024-06-18T05:45:44+00:00"
         }
     ],
     "packages-dev": [

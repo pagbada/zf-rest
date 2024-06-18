@@ -26,7 +26,7 @@
         "zfcampus/zf-api-problem": "^1.2.2",
         "zfcampus/zf-content-negotiation": "^1.2.1",
         "zfcampus/zf-hal": "^1.4",
-        "zfcampus/zf-mvc-auth": "@dev"
+        "zfcampus/zf-mvc-auth": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.5",

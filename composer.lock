@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f9dd16e74375da4a1864d15db42de43",
+    "content-hash": "031dcb85cd72f463bbff2548908cd434",
     "packages": [
         {
             "name": "bshaffer/oauth2-server-php",
@@ -1932,16 +1932,16 @@
         },
         {
             "name": "zfcampus/zf-mvc-auth",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pagbada/zf-mvc-auth.git",
-                "reference": "62ee7f26f6c958d3b9e9c3158c2e08bf723d4dce"
+                "reference": "bd265519c8d6f178163af8553bf233ec36a60aaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pagbada/zf-mvc-auth/zipball/62ee7f26f6c958d3b9e9c3158c2e08bf723d4dce",
-                "reference": "62ee7f26f6c958d3b9e9c3158c2e08bf723d4dce",
+                "url": "https://api.github.com/repos/pagbada/zf-mvc-auth/zipball/bd265519c8d6f178163af8553bf233ec36a60aaa",
+                "reference": "bd265519c8d6f178163af8553bf233ec36a60aaa",
                 "shasum": ""
             },
             "require": {
@@ -1963,7 +1963,6 @@
                 "zendframework/zend-coding-standard": "~1.0.0",
                 "zendframework/zend-session": "^2.8.5"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2019,7 +2018,7 @@
                 "chat": "https://zendframework-slack.herokuapp.com",
                 "forum": "https://discourse.zendframework.com/c/questions/apigility"
             },
-            "time": "2024-06-18T06:08:27+00:00"
+            "time": "2024-06-18T03:50:46+00:00"
         },
         {
             "name": "zfcampus/zf-oauth2",
@@ -4041,9 +4040,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "zfcampus/zf-mvc-auth": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
